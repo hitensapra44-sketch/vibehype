@@ -9,7 +9,7 @@ const steps = [
     number: '01',
     title: 'Describe',
     items: [
-      'Describe your app in normal words — no tech jargon needed',
+      'Describe your app in normal words',
       'Tell us who you\'re targeting and what problems it solves',
       'Paste your SaaS link or set your app/SaaS tone',
       'One-time setup — Vibe Hype learns your brand forever',
@@ -20,7 +20,7 @@ const steps = [
     number: '02',
     title: 'Generate',
     items: [
-      'Finds real people who need your app right now',
+      'Vibe Hype will find real people who need your app right now',
       'Spots where they\'re talking about it — Reddit, X, TikTok & more',
       'Generates hooks, captions, scripts & hashtags instantly',
       'Picks the perfect platform and best posting times for you',
@@ -34,7 +34,7 @@ const steps = [
       'Get ready-to-post content and decide exactly what goes live',
       'Hit "Post Now" for instant fire or "Schedule" your week',
       'Or upload & schedule your own content effortlessly',
-      'Full control — you approve, we execute',
+      'Full control you approve, Vibe Hype execute',
     ],
   },
   {

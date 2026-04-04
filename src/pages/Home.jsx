@@ -6,12 +6,14 @@ import FeaturesSection from '../components/landing/FeaturesSection';
 import HowItWorks from '../components/landing/howitworks';
 import BenefitsTable from '../components/landing/BenefitsTable';
 import Testimonials from '../components/landing/testimnonials';
+import FAQSection from '../components/landing/faqs';
 import CTASection from '../components/landing/CTAsection';
 import FooterSection from '../components/landing/fottersection';
 
 export default function Home() {
   const [joined, setJoined] = useState(() => localStorage.getItem('joined_waitlist') === 'true');
 
+  // @ts-ignore
   const handleJoined = () => {
     setJoined(true);
     localStorage.setItem('joined_waitlist', 'true');
@@ -26,6 +28,7 @@ export default function Home() {
       <HowItWorks />
       <BenefitsTable />
       <Testimonials />
+      <FAQSection />
       <CTASection />
       <FooterSection joined={joined} onJoined={handleJoined} />
     </div>

@@ -4,9 +4,9 @@ import { Check, X } from 'lucide-react';
 
 const rows = [
   { benefit: 'Early beta access when Vibe Hype launches', free: true, paid: true },
-  { benefit: 'Weekly founder updates + community access', free: true, paid: true },
-  { benefit: 'Early access to the full agentic mode', free: false, paid: true },
-  { benefit: 'Unlimited agentic mode + priority support', free: false, paid: true },
+  { benefit: 'Weekly founder updates + community access(When launched)', free: true, paid: true },
+  { benefit: '!st month pro subscription discount', free: false, paid: true },
+  { benefit: 'Unlimited agentic mode + priority support(When launched)', free: false, paid: true },
   { benefit: 'Personal brand voice setup + 3 custom vibe packs', free: false, paid: true },
 ];
 

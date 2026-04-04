@@ -69,7 +69,7 @@ export default function HeroSection({ joined, onJoined }) {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
             <Zap className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-medium text-gray-300">Your AI marketing co-pilot for SaaS</span>
+            <span className="text-sm font-medium text-gray-300">Love building but hate marketing? You are at right place.</span>
           </div>
         </motion.div>
 
@@ -99,7 +99,8 @@ export default function HeroSection({ joined, onJoined }) {
           className="mt-6 text-lg sm:text-xl max-w-2xl mx-auto"
           style={{ color: '#D1D5DB', lineHeight: 1.6 }}
         >
-          Make your app/SaaS marketing end to end automated. Your AI marketing agent specialized in your app/SaaS niche.
+        Your AI marketing co-pilot. It finds your potential customers in live conversations, creates actionable strategies, writes posts that sound exactly like you, posts and schedules them automatically, gives you analytics, and tells you exactly what to change to grow. It will make your app marketing on autopilot.
+
         </motion.p>
 
         <motion.div

@@ -6,32 +6,32 @@ const testimonials = [
   {
     handle: '@indiealex42',
     avatar: 'IA',
-    badge: '+300% engagement',
-    text: 'This concept is exactly what I\'ve been dying for. Pre-purchased the $1.99 monthly in seconds. Can\'t wait for launch – it\'s gonna kill my "post into the void" problem forever. Already feeling less stressed just knowing it\'s coming 🔥',
+    badge: 'Pre-Purchased',
+    text: '“Man, I never know what to post, where to post it, or who I’m even posting for. Everything always felt so random. But the features in this app actually fix that mess. Feels good.”',
   },
   {
     handle: '@sarahcodes_',
     avatar: 'SC',
-    badge: '+250% reach',
-    text: 'Saw the page and got goosebumps – this is the vibe marketing tool we all need. Bought early bird monthly right away. So excited for autopilot posts that actually sound like me. No more guessing what to say or where to post. Let\'s gooo!',
+    badge: 'Pre-Purchased',
+    text: '“Getting content ideas was easy with AI, so I thought marketing would be the same. Nope — it’s still hard as hell. But this app? It’s turning marketing into something that actually vibes. Super relieved.”',
   },
   {
     handle: '@devonbuilds',
     avatar: 'DB',
-    badge: '+400% sign-ups',
-    text: 'Pre-purchased because the pain points hit home hard. Super pumped for release – this thing will finally solve my problem of juggling 10 tools for one marketing task nightmare. Counting days till I can turn it on and chill.',
+    badge: 'Joined waitlist',
+    text: '“The best thing is it feels like vibe coding but for marketing. You just say what you want in normal English and it runs everything on autopilot. No more overthinking, just results. This is wild.”',
   },
   {
     handle: '@mike_the_maker',
     avatar: 'MM',
-    badge: '10x productivity',
-    text: 'Loving the energy already. Snagged the $1.99/mo pre-purchase instantly. Excited as hell for it to drop – it\'s gonna end my daily manual research + posting grind.',
+    badge: 'Pre-Purchased',
+    text: '“Coding used to stress me out so bad. Then vibe coding came and made it easy and fun. Marketing has been killing me… but this app is doing the same thing for marketing. It’s actually stress-free now. I love it.”',
   },
   {
     handle: '@hitensapra11',
     avatar: 'HS',
-    badge: 'Stress-free marketing',
-    text: 'Coding was hard then it becomes vibe coding now it\'s easy and stress free. Marketing is hard and this app is converting it into vibe marketing to make it easy and stress free. Love the app.',
+    badge: 'joined waitlist',
+    text: '“Every app builder’s biggest nightmare is marketing. You can build something great, but telling people about it? That part makes everyone sweat. This app feels like the early days of Cursor AI — finally making the painful part simple.”',
   },
 ];
 

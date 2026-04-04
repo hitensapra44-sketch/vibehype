@@ -6,7 +6,7 @@ const features = [
   {
     icon: Search,
     title: 'Audience Spotter',
-    desc: 'Shows you exactly who wants your app and where they hang out online right now. It finds real conversations (Reddit, Twitter, TikTok, forums) where people talk about the problems you solve.',
+    desc: 'Shows you exactly who wants your app and where they hang out online right now. It finds real conversations (Reddit, Twitter, TikTok, forums) where people talk about the problems your app solve.',
   },
   {
     icon: Target,
@@ -16,32 +16,32 @@ const features = [
   {
     icon: PenTool,
     title: 'Hook Maker',
-    desc: 'Creates short, powerful opening lines that make people stop scrolling and read your post. Not random GPT — ready-to-use hooks made specially for your audience\'s problems.',
+    desc: 'Creates short, powerful opening lines that make people stop scrolling and read your post. Not random GPT. It create  ready-to-use hooks made specially for your audience\'s problems.',
   },
   {
     icon: FileText,
-    title: 'Ready Posts',
-    desc: 'Gives you full posts, captions, hashtags, and the best time to share them. Choose a platform — it makes everything sound natural and ready to copy-paste.',
+   title: 'Ready Posts',
+    desc: 'Gives you full posts, captions, hashtags, and the best time to share them. Choose a platform. It makes everything sound natural and ready to copy-paste.',
   },
   {
     icon: Send,
     title: 'Auto Poster',
-    desc: 'Posts and schedules your content for you on Instagram, TikTok, Twitter, LinkedIn, Reddit and more. Turn it on once — it keeps posting at the perfect times.',
+    desc: ' Posts and schedules your content for you on Instagram, TikTok, Twitter, LinkedIn, Reddit and more. Turn it on once. it keeps posting at the perfect times.',
   },
   {
     icon: Eye,
     title: 'Competitor Watcher',
-    desc: 'Shows what your competitors and popular creators in your niche are posting. You see their best content quickly and get fresh ideas to try yourself.',
+    desc: 'Shows what your competitors and popular creators in your niche are posting. Shows you their best content quickly and give you fresh ideas to try yourself.',
   },
   {
     icon: TrendingUp,
     title: 'Results Tracker',
-    desc: 'Checks how your posts are doing and sends simple daily and weekly updates. It tells you what\'s working, what to change, and how much you\'re really growing.',
+    desc: 'Gives you clear and detailed analytics of your posts and sends simple daily and weekly updates. It tells you what\'s working, what to change, and how much you\'re really growing.',
   },
   {
     icon: MessageCircle,
     title: 'Your 24/7 Marketing Buddy',
-    desc: 'A chat helper that knows everything about your app. Ask anything anytime — "Give me a Reddit idea" or "What should I do next week?" — it answers like an expert.',
+    desc: 'A helper that knows everything about your app. Ask anything anytime "Give me a Reddit idea" or "What should I do next week?"  it answers like an expert.',
   },
 ];
 

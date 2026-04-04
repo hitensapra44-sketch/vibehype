@@ -13,15 +13,15 @@ const problems = [
   },
   {
     icon: Layers,
-    text: "You're juggling 10+ scattered apps and tools for one simple marketing task",
+    text: "You're juggling 10+ apps and tools for one simple marketing task",
   },
   {
     icon: BarChart3,
-    text: "No detailed insights or real growth guidance — everything feels random and hopeless",
+    text: "You don;t have detailed analytics to see whats working and whats not",
   },
   {
     icon: Clock,
-    text: "Takes too much manual work like research, create, post and analyze",
+    text: "Marketing takes too much manual work like research, create, post and analyze",
   },
   {
     icon: RefreshCw,
