@@ -56,12 +56,12 @@ export default function HeroSection({ joined, onJoined }) {
       <ParticleBackground />
       
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl"
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-2xl"
         style={{ background: 'radial-gradient(circle, #7C3AED 0%, transparent 70%)' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-15 blur-3xl"
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-15 blur-2xl"
         style={{ background: 'radial-gradient(circle, #EC4899 0%, transparent 70%)' }} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24 pb-16">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
+          className="text-3xl sm:text-5xl md:text-7xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
           style={{ letterSpacing: '-1px', lineHeight: 1.1 }}
         >
           Turn Your App/SaaS Marketing Into a{' '}
@@ -167,7 +167,7 @@ export default function HeroSection({ joined, onJoined }) {
           className="mt-8 text-sm font-medium"
           style={{ color: '#A1A1AA' }}
         >
-          ⚡ 146 app/SaaS founders already joined
+          ⚡ 246 app/SaaS founders ready for vibe marketing.
         </motion.p>
       </div>
     </section>
