@@ -11,12 +11,14 @@ function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/survey" element={<Survey />} />
-          <Route path="/pre-purchase" element={<PrePurchase />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        <div className="min-h-screen w-full mx-auto overflow-x-hidden bg-black text-white">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/survey" element={<Survey />} />
+            <Route path="/pre-purchase" element={<PrePurchase />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </div>
       </Router>
       <Toaster />
     </QueryClientProvider>

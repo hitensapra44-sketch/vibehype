@@ -187,7 +187,7 @@ export default function Survey() {
   };
 
   if (showComplete) return <SurveyComplete onDone={handleDone} />;
-
+<div className="w-full max-w-md mx-auto px-4"></div>
   return (
     <div className="min-h-screen font-poppins flex flex-col" style={{ background: '#0A0A0A' }}>
       {/* Top bar */}
@@ -206,7 +206,7 @@ export default function Survey() {
 
       {/* Survey content */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 py-12">
-        <div className="w-full max-w-xl">
+        <div className="w-full max-w-md mx-auto px-4">
           <AnimatePresence mode="wait">
             <SurveyStep
               key={step}
