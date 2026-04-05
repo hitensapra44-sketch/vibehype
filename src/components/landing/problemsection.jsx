@@ -40,7 +40,7 @@ export default function ProblemSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white px-2" style={{ letterSpacing: '-1px', lineHeight: 1.2 }}>
             Problems You Are Facing That{' '}
             <span className="bg-clip-text text-transparent"
               style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>

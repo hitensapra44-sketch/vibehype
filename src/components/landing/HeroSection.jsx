@@ -77,16 +77,16 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] font-bold text-white leading-tight"
-          style={{ letterSpacing: '-2px', lineHeight: 1.05 }}
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
+          style={{ letterSpacing: '-1px', lineHeight: 1.1 }}
         >
           Turn Your App/SaaS Marketing Into a{' '}
-          <span className="bg-clip-text text-transparent"
+          <span className="bg-clip-text text-transparent inline-block"
             style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
             Vibe
           </span>{' '}
           That Turns It Into{' '}
-          <span className="bg-clip-text text-transparent"
+          <span className="bg-clip-text text-transparent inline-block"
             style={{ backgroundImage: 'linear-gradient(90deg, #EC4899, #7C3AED)' }}>
             Hype.
           </span>
@@ -96,7 +96,7 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-6 text-lg sm:text-xl max-w-2xl mx-auto"
+          className="mt-6 text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
           style={{ color: '#D1D5DB', lineHeight: 1.6 }}
         >
         Your AI marketing co-pilot. It finds your potential customers in live conversations, creates actionable strategies, writes posts that sound exactly like you, posts and schedules them automatically, gives you analytics, and tells you exactly what to change to grow. It will make your app marketing on autopilot.
@@ -107,7 +107,7 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="mt-10 flex flex-col items-center justify-center gap-4"
+          className="mt-10 flex flex-col items-center justify-center gap-4 px-4"
         >
           <AnimatePresence mode="wait">
             {!joined ? (
@@ -117,22 +117,22 @@ export default function HeroSection({ joined, onJoined }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="relative p-[2px] rounded-xl"
-                style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)', boxShadow: '0 0 32px 6px rgba(124,58,237,0.35), 0 0 64px 10px rgba(236,72,153,0.2)' }}
+                className="relative p-[1px] rounded-xl w-full max-w-md"
+                style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)', boxShadow: '0 0 24px 2px rgba(124,58,237,0.25)' }}
               >
-                <div className="flex items-center gap-0 rounded-[10px] overflow-hidden bg-[#0A0A0A]">
+                <div className="flex flex-col sm:flex-row items-stretch gap-0 rounded-[10px] overflow-hidden bg-[#0A0A0A]">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="px-5 py-4 bg-transparent text-white placeholder-gray-500 focus:outline-none text-base w-64 sm:w-72"
+                    className="flex-1 px-5 py-4 bg-transparent text-white placeholder-gray-500 focus:outline-none text-base min-w-0"
                     onKeyDown={(e) => e.key === 'Enter' && handleJoinWaitlist()}
                   />
                   <button
                     onClick={handleJoinWaitlist}
                     disabled={submitting}
-                    className="px-6 py-4 text-white font-semibold text-base hover:opacity-90 transition-all whitespace-nowrap"
+                    className="px-6 py-4 text-white font-semibold text-base hover:opacity-90 transition-all sm:whitespace-nowrap"
                     style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}
                   >
                     {submitting ? '...' : 'Join the Hype List'}

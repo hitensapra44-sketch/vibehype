@@ -54,16 +54,16 @@ export default function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-2"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white break-words" style={{ letterSpacing: '-1px', lineHeight: 1.2 }}>
             Vibe Hype Fixes Marketing Problems{' '}
             <span className="bg-clip-text text-transparent"
               style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
               In One Click
             </span>
           </h2>
-          <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: '#A1A1AA' }}>
+          <p className="mt-4 text-base sm:text-lg max-w-xl mx-auto" style={{ color: '#A1A1AA' }}>
             Everything your brand needs to go viral.
           </p>
         </motion.div>

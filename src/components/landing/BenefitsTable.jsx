@@ -45,48 +45,50 @@ export default function BenefitsTable() {
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true, margin: '-50px' }} 
           transition={{ duration: 0.6, delay: 0.2 }} 
-          className="mt-12 rounded-2xl overflow-hidden border border-white/8" 
+          className="mt-12 rounded-2xl overflow-hidden border border-white/8 w-full overflow-x-auto" 
           style={{ borderColor: 'rgba(255,255,255,0.08)' }} 
         > 
-          {/* Table header */} 
-          <div className="grid grid-cols-3 text-center" 
-            style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(236,72,153,0.1))' }}> 
-            <div className="px-4 py-5 text-left text-sm font-semibold text-white border-r border-white/5"> 
-              Benefit 
+          <div className="min-w-[600px] sm:min-w-0"> 
+            {/* Table header */} 
+            <div className="grid grid-cols-3 text-center" 
+              style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(236,72,153,0.1))' }}> 
+              <div className="px-4 py-5 text-left text-sm font-semibold text-white border-r border-white/5"> 
+                Benefit 
+              </div> 
+              <div className="px-4 py-5 text-sm font-semibold border-r border-white/5" 
+                style={{ color: '#A1A1AA' }}> 
+                Join Waitlist<br /> 
+                <span className="text-xs font-normal text-gray-500">(Free)</span> 
+              </div> 
+              <div className="px-4 py-5 text-sm font-semibold bg-clip-text text-transparent" 
+                style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}> 
+                Pre-Purchase Now<br /> 
+                <span className="text-xs font-normal text-gray-400">(less than coffee)</span> 
+              </div> 
             </div> 
-            <div className="px-4 py-5 text-sm font-semibold border-r border-white/5" 
-              style={{ color: '#A1A1AA' }}> 
-              Join Waitlist<br /> 
-              <span className="text-xs font-normal text-gray-500">(Free)</span> 
-            </div> 
-            <div className="px-4 py-5 text-sm font-semibold bg-clip-text text-transparent" 
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}> 
-              Pre-Purchase Now<br /> 
-              <span className="text-xs font-normal text-gray-400">(less than coffee)</span> 
-            </div> 
-          </div> 
 
-          {/* Rows */} 
-          {rows.map((row, i) => ( 
-            <div 
-              key={i} 
-              className="grid grid-cols-3 text-center border-t border-white/5 hover:bg-white/[0.02] transition-colors" 
-            > 
-              <div className="px-4 py-4 text-left text-sm font-medium text-white border-r border-white/5 flex items-center"> 
-                {row.benefit} 
+            {/* Rows */} 
+            {rows.map((row, i) => ( 
+              <div 
+                key={i} 
+                className="grid grid-cols-3 text-center border-t border-white/5 hover:bg-white/[0.02] transition-colors" 
+              > 
+                <div className="px-4 py-4 text-left text-sm font-medium text-white border-r border-white/5 flex items-center"> 
+                  {row.benefit} 
+                </div> 
+                <div className="px-4 py-4 flex items-center justify-center border-r border-white/5"> 
+                  {row.free 
+                    ? <Check className="w-5 h-5 text-green-400" /> 
+                    : <X className="w-5 h-5 text-red-400/60" />} 
+                </div> 
+                <div className="px-4 py-4 flex items-center justify-center"> 
+                  {row.paid 
+                    ? <Check className="w-5 h-5 text-green-400" /> 
+                    : <X className="w-5 h-5 text-red-400/60" />} 
+                </div> 
               </div> 
-              <div className="px-4 py-4 flex items-center justify-center border-r border-white/5"> 
-                {row.free 
-                  ? <Check className="w-5 h-5 text-green-400" /> 
-                  : <X className="w-5 h-5 text-red-400/60" />} 
-              </div> 
-              <div className="px-4 py-4 flex items-center justify-center"> 
-                {row.paid 
-                  ? <Check className="w-5 h-5 text-green-400" /> 
-                  : <X className="w-5 h-5 text-red-400/60" />} 
-              </div> 
-            </div> 
-          ))} 
+            ))} 
+          </div> 
         </motion.div> 
       </div> 
     </section> 
