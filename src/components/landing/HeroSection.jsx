@@ -56,9 +56,9 @@ export default function HeroSection({ joined, onJoined }) {
       <ParticleBackground />
       
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-2xl"
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-1xl"
         style={{ background: 'radial-gradient(circle, #7C3AED 0%, transparent 70%)' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-15 blur-2xl"
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-15 blur-1xl"
         style={{ background: 'radial-gradient(circle, #EC4899 0%, transparent 70%)' }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 pb-16">
@@ -77,7 +77,7 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-3xl sm:text-5xl md:text-7xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
           style={{ letterSpacing: '-1px', lineHeight: 1.1 }}
         >
           Turn Your App/SaaS Marketing Into a{' '}
@@ -96,8 +96,8 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-6 text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
-          style={{ color: '#D1D5DB', lineHeight: 1.6 }}
+          className="mt-6 text-base sm:text-lg md:text-xl max-w-1xl mx-auto"
+          style={{ color: '#D1D5DB', lineHeight: 1.4 }}
         >
         Your AI marketing co-pilot. It finds your potential customers in live conversations, creates actionable strategies, writes posts that sound exactly like you, posts and schedules them automatically, gives you analytics, and tells you exactly what to change to grow. It will make your app marketing on autopilot.
 
@@ -126,7 +126,7 @@ export default function HeroSection({ joined, onJoined }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="flex-1 px-5 py-4 bg-transparent text-white placeholder-gray-500 focus:outline-none text-base min-w-0"
+                    className="flex-1 px-4 py-4 bg-transparent text-white placeholder-gray-500 focus:outline-none text-base min-w-0"
                     onKeyDown={(e) => e.key === 'Enter' && handleJoinWaitlist()}
                   />
                   <button
