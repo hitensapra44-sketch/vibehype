@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { supabase } from '../supabaseClient';
 import React, { useState, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -176,7 +177,7 @@ export default function Survey() {
         await saveSurveyData(payload); 
         
         toast.success('Survey submitted successfully! 🔥'); 
-        navigate('/pre-purchase'); 
+        setShowComplete(true); 
       } catch (err) { 
         console.error('❌ Submission error:', err); 
         toast.error('Failed to save answers. Please try again.'); 
@@ -187,7 +188,7 @@ export default function Survey() {
   };
 
   if (showComplete) return <SurveyComplete onDone={handleDone} />;
-<div className="w-full max-w-md mx-auto px-4"></div>
+
   return (
     <div className="min-h-screen font-poppins flex flex-col" style={{ background: '#0A0A0A' }}>
       {/* Top bar */}
@@ -206,7 +207,7 @@ export default function Survey() {
 
       {/* Survey content */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 py-12">
-        <div className="w-full max-w-md mx-auto px-4">
+        <div className="w-full max-w-full lg:max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
             <SurveyStep
               key={step}
