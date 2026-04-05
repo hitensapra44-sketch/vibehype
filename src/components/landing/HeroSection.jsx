@@ -96,8 +96,8 @@ export default function HeroSection({ joined, onJoined }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-2 text-base sm:text-lg md:text-xl max-w-0.5xl mx-auto"
-          style={{ color: '#D1D5DB', lineHeight: 1.2 }}
+          className="mt-6 text-sm sm:text-base md:text-lg max-w-2xl mx-auto opacity-80"
+          style={{ color: '#D1D5DB', lineHeight: 1.6 }}
         >
         Your AI marketing co-pilot. It finds your potential customers in live conversations, creates actionable strategies, writes posts that sound exactly like you, posts and schedules them automatically, gives you analytics, and tells you exactly what to change to grow. It will make your app marketing on autopilot.
 
