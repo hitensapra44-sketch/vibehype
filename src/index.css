@@ -85,6 +85,7 @@
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    font-size: 15px;
   }
 
   body {
@@ -103,6 +104,6 @@
 @media (max-width: 668px) {
   #root {
     padding: 1rem;
-    font-size: 16px;
+    font-size: 13px;
   }
 }
