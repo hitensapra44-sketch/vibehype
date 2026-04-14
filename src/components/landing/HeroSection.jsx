@@ -80,15 +80,15 @@ export default function HeroSection({ joined, onJoined }) {
           className="text-5xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-white leading-tight break-words"
           style={{ letterSpacing: '-2px', lineHeight: 1.1 }}
         >
-          Turn Your App/SaaS Marketing Into a{' '}
+          93% Of App/Saas{' '}
           <span className="bg-clip-text text-transparent inline-block"
             style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
-            Vibe
+            Fails
           </span>{' '}
-          That Turns It Into{' '}
+          Due To Bad Marketing. Don't Be One Of{' '}
           <span className="bg-clip-text text-transparent inline-block"
             style={{ backgroundImage: 'linear-gradient(90deg, #EC4899, #7C3AED)' }}>
-            Hype.
+            Them.
           </span>
         </motion.h1>
 
@@ -168,6 +168,7 @@ export default function HeroSection({ joined, onJoined }) {
           style={{ color: '#A1A1AA' }}
         >
           ⚡ 246 app/SaaS founders ready for vibe marketing.
+                 We will not spam you( Pinky Promise )
         </motion.p>
       </div>
     </section>
