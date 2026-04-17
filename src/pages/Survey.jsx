@@ -9,25 +9,8 @@ import SurveyComplete from '../components/survey/SurveyComplete';
 import { toast } from 'sonner';
 
 const saveSurveyData = async (payload) => { 
-  // 1. Try to get the real logged-in user from Supabase
-  const { data: { user } } = await supabase.auth.getUser(); 
-  let finalUserId;
-
-  if (user) {
-    finalUserId = user.id;
-  } else {
-    // 2. If no logged-in user, use/create a persistent anonymous user ID via localStorage
-    let anonymousId = localStorage.getItem('anonymous_id');
-    if (!anonymousId) {
-      anonymousId = crypto.randomUUID();
-      localStorage.setItem('anonymous_id', anonymousId);
-    }
-    finalUserId = anonymousId;
-  }
-
-  // 3. Save all the survey answers to the user_answers table
   const records = payload.map(item => ({ 
-    user_id: finalUserId, 
+    user_id: null, 
     question_id: item.question_id, 
     answer: item.answer 
   })); 
@@ -40,9 +23,9 @@ const saveSurveyData = async (payload) => {
     console.error('❌ Supabase save error:', error); 
     throw error; 
   } else { 
-    console.log('✅ Survey persisted to Supabase user_answers table for user:', finalUserId); 
+    console.log('✅ Survey persisted to Supabase user_answers table'); 
   } 
-}; 
+};
 
 const surveyConfig = [
   {

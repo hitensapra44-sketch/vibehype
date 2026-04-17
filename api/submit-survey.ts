@@ -89,7 +89,7 @@ export default async function handler(req: any, res: any) {
 
   } catch (err: any) {
     console.error(`[${new Date().toISOString()}] ❌ Submission failed for user: ${user_id}`, err);
-    return res.status(500).json({ 
+    return res.status(500).json({
       error: 'An internal server error occurred while persisting survey data.',
       details: process.env.NODE_ENV === 'development' ? err.message : undefined
     });

@@ -6,17 +6,14 @@ import { Link } from 'react-router-dom';
 import { supabase } from '@/supabaseClient';
 import { toast } from 'sonner';
 
-export default function HeroSection({ joined, onJoined }) {
+export default function HeroSection({ joined, onJoined, onValidateEmail }) {
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
   const handleJoinWaitlist = async () => {
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      toast.error('Please enter a valid email address');
-      return;
-    }
+    // Enhanced Validation
+    const finalEmail = onValidateEmail ? onValidateEmail(email) : email;
+    if (!finalEmail) return;
 
     setSubmitting(true);
     try {
@@ -24,7 +21,7 @@ export default function HeroSection({ joined, onJoined }) {
       // signInWithOtp is the most secure way to handle this on the client.
       // It handles duplicate checking and insertion automatically.
       const { error } = await supabase.auth.signInWithOtp({
-        email,
+        email: finalEmail,
         options: {
           emailRedirectTo: window.location.origin,
         }

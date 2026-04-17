@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles, User, ArrowRight } from 'lucide-react';
+import { Menu, X, Sparkles, User, ArrowRight, LogOut } from 'lucide-react';
+import { supabase } from '@/supabaseClient';
 
 export default function Navbar({ joined, onJoinWaitlist }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+
+  const handleLogout = async () => {
+    localStorage.removeItem('joined_waitlist');
+    await supabase.auth.signOut();
+    window.location.reload();
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -81,7 +89,7 @@ export default function Navbar({ joined, onJoinWaitlist }) {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-3 relative"
                   >
                     <Link
                       to="/survey"
@@ -91,9 +99,35 @@ export default function Navbar({ joined, onJoinWaitlist }) {
                       Do Survey (34s)
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20"
-                      style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.3), rgba(236,72,153,0.3))' }}>
-                      <User className="w-4 h-4 text-white" />
+                    <div className="relative">
+                      <button 
+                        onClick={() => setProfileOpen(!profileOpen)}
+                        className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 transition-all hover:scale-105"
+                        style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.3), rgba(236,72,153,0.3))' }}
+                      >
+                        <User className="w-4 h-4 text-white" />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {profileOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{ duration: 0.15 }}
+                            className="absolute right-0 mt-3 w-40 rounded-xl border border-white/10 overflow-hidden shadow-xl"
+                            style={{ background: '#111111' }}
+                          >
+                            <button
+                              onClick={handleLogout}
+                              className="w-full flex items-center gap-2 px-4 py-3 text-sm font-medium text-red-400 hover:bg-white/5 transition-colors"
+                            >
+                              <LogOut className="w-4 h-4" />
+                              Log Out
+                            </button>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </motion.div>
                 )}
