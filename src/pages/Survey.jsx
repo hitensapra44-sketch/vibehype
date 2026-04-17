@@ -8,23 +8,23 @@ import SurveyStep from '../components/survey/SurveyStep';
 import SurveyComplete from '../components/survey/SurveyComplete';
 import { toast } from 'sonner';
 
-const saveSurveyData = async (payload) => { 
-  const records = payload.map(item => ({ 
-    user_id: null, 
-    question_id: item.question_id, 
-    answer: item.answer 
-  })); 
+const saveSurveyData = async (payload) => {
+  const records = payload.map(item => ({
+    user_id: null,
+    question_id: item.question_id,
+    answer: item.answer
+  }));
 
-  const { error } = await supabase 
-    .from('user_answers') 
-    .insert(records); 
+  const { error } = await supabase
+    .from('user_answers')
+    .insert(records);
 
-  if (error) { 
-    console.error('❌ Supabase save error:', error); 
-    throw error; 
-  } else { 
-    console.log('✅ Survey persisted to Supabase user_answers table'); 
-  } 
+  if (error) {
+    console.error('❌ Supabase save error:', error);
+    throw error;
+  } else {
+    console.log('✅ Survey persisted to Supabase user_answers table');
+  }
 };
 
 const surveyConfig = [
@@ -62,7 +62,7 @@ const surveyConfig = [
     otherField: 'marketing_channels_other',
     options: [
       'LinkedIn', 'X (Twitter)', 'Product Hunt', 'Indie Hackers',
-      'TikTok / Instagram', 'YouTube', 'Email',
+      'TikTok / Instagram', 'YouTube', 'Reddit',
       'Paid ads (Google/Meta)', 'App stores', 'Other',
     ],
   },
@@ -148,42 +148,42 @@ export default function Survey() {
     if (step < surveyConfig.length) {
       setStep(step + 1);
     } else {
-      setSubmitting(true); 
-      try { 
-        const payload = surveyConfig.map(c => { 
-          const val = answers[c.field]; 
-          let text = Array.isArray(val) ? val.join(', ') : (val || ''); 
-          if (c.otherField && answers[c.otherField]) text += ` (Other: ${answers[c.otherField]})`; 
-          return { question_id: c.id, answer: text.trim() }; 
-        }).filter(p => p.answer !== ''); 
- 
-        await saveSurveyData(payload); 
-        
-        toast.success('Survey submitted successfully! 🔥'); 
-        setShowComplete(true); 
-      } catch (err) { 
-        console.error('❌ Submission error:', err); 
-        toast.error('Failed to save answers. Please try again.'); 
-      } finally { 
-        setSubmitting(false); 
-      } 
+      setSubmitting(true);
+      try {
+        const payload = surveyConfig.map(c => {
+          const val = answers[c.field];
+          let text = Array.isArray(val) ? val.join(', ') : (val || '');
+          if (c.otherField && answers[c.otherField]) text += ` (Other: ${answers[c.otherField]})`;
+          return { question_id: c.id, answer: text.trim() };
+        }).filter(p => p.answer !== '');
+
+        await saveSurveyData(payload);
+
+        toast.success('Survey submitted successfully! 🔥');
+        setShowComplete(true);
+      } catch (err) {
+        console.error('❌ Submission error:', err);
+        toast.error('Failed to save answers. Please try again.');
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
 
   if (showComplete) return <SurveyComplete onDone={handleDone} />;
 
   return (
-    <div className="min-h-screen font-poppins flex flex-col" style={{ background: '#0A0A0A' }}>
+    <div className="min-h-screen font-poppins flex flex-col bg-transparent">
       {/* Top bar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-white/5">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-border-muted bg-bg-base/50 backdrop-blur-md">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-md flex items-center justify-center"
-            style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
+            style={{ background: '#b55933' }}>
             <Sparkles className="w-3.5 h-3.5 text-white" />
           </div>
-          <span className="text-white font-bold">Vibe Hype</span>
+          <span className="text-text-primary font-bold">Vibe Hype</span>
         </Link>
-        <Link to="/" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+        <Link to="/" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
           Back to Home
         </Link>
       </div>
@@ -212,11 +212,10 @@ export default function Survey() {
           <div className="flex items-center justify-between mt-10">
             <button
               onClick={() => step > 1 && setStep(step - 1)}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                step > 1
-                  ? 'text-gray-300 border border-white/10 hover:bg-white/5'
-                  : 'text-gray-600 cursor-not-allowed'
-              }`}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${step > 1
+                ? 'text-text-primary border border-border-muted hover:bg-bg-elevated'
+                : 'text-text-secondary/30 cursor-not-allowed border border-border-muted/50'
+                }`}
               disabled={step === 1}
             >
               <ArrowLeft className="w-4 h-4" /> Back
@@ -225,10 +224,8 @@ export default function Survey() {
             <button
               onClick={handleNext}
               disabled={!canNext() || submitting}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/20 ${
-                canNext() ? 'opacity-100' : 'opacity-40 cursor-not-allowed'
-              }`}
-              style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)', borderRadius: '8px' }}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-primary/20 ${canNext() ? 'bg-primary hover:bg-primary-hover opacity-100' : 'bg-primary/20 cursor-not-allowed'
+                }`}
             >
               {submitting ? 'Submitting...' : step === surveyConfig.length ? 'Finish' : 'Next'}
               <ArrowRight className="w-4 h-4" />

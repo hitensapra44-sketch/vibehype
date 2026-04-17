@@ -37,7 +37,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-4 sm:px-6 font-poppins" style={{ background: '#050505' }}>
+    <section className="py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -48,8 +48,7 @@ export default function Testimonials() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
             Founders Who Love{' '}
-            <span className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+            <span className="text-primary">
               Vibe Hype
             </span>
           </h2>
@@ -63,27 +62,25 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple-500/20 transition-all duration-300"
+              className="p-6 rounded-2xl border border-border-muted bg-bg-surface hover:bg-bg-elevated transition-all duration-300 hover:border-primary/20"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                  style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white bg-primary">
                   {t.avatar}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{t.handle}</p>
+                  <p className="text-text-primary font-semibold text-sm">{t.handle}</p>
                   <div className="flex gap-1 mt-0.5">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                 </div>
-                <span className="ml-auto text-xs font-semibold px-2.5 py-1 rounded-full"
-                  style={{ background: 'linear-gradient(90deg, rgba(124,58,237,0.2), rgba(236,72,153,0.2))', color: '#C084FC' }}>
+                 <span className="ml-auto text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary">
                   {t.badge}
                 </span>
               </div>
-              <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed text-text-secondary">
                 "{t.text}"
               </p>
             </motion.div>

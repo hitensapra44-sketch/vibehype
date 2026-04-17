@@ -47,7 +47,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-24 px-4 sm:px-6 font-poppins" style={{ background: '#050505' }}>
+    <section id="features" className="py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,14 +56,14 @@ export default function FeaturesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 px-2"
         >
+
           <h2 className="text-3xl sm:text-5xl font-bold text-white break-words" style={{ letterSpacing: '-1px', lineHeight: 1.2 }}>
             Vibe Hype Fixes Marketing Problems{' '}
-            <span className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+            <span className="text-primary">
               In One Click
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg max-w-xl mx-auto" style={{ color: '#A1A1AA' }}>
+          <p className="mt-4 text-base sm:text-lg max-w-xl mx-auto text-text-secondary">
             Everything your brand needs to go viral.
           </p>
         </motion.div>
@@ -76,17 +76,16 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-1"
+              className="group relative p-6 rounded-2xl border border-border-muted bg-bg-surface hover:bg-bg-elevated transition-all duration-300 hover:border-primary/30 hover:-translate-y-1"
             >
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: 'linear-gradient(180deg, rgba(124,58,237,0.08) 0%, transparent 100%)' }} />
+                style={{ background: 'linear-gradient(180deg, rgba(181,89,51,0.08) 0%, transparent 100%)' }} />
               <div className="relative">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.2), rgba(236,72,153,0.2))' }}>
-                  <f.icon className="w-5 h-5 text-purple-400" />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-primary/10">
+                  <f.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{f.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#A1A1AA' }}>
+                <p className="text-sm leading-relaxed text-text-secondary">
                   {f.desc}
                 </p>
               </div>

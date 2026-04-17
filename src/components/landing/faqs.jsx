@@ -34,11 +34,11 @@ function FAQItem({ faq, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="border border-white/5 rounded-2xl overflow-hidden"
+      className="border border-border-muted rounded-2xl overflow-hidden"
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-4 sm:py-5 text-left bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-4 sm:py-5 text-left bg-bg-surface hover:bg-bg-elevated transition-colors"
       >
         <span className="text-sm sm:text-base font-semibold text-white leading-snug">{faq.q}</span>
         <motion.div
@@ -46,7 +46,7 @@ function FAQItem({ faq, index }) {
           transition={{ duration: 0.25 }}
           className="flex-shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-purple-400" />
+          <ChevronDown className="w-5 h-5 text-primary" />
         </motion.div>
       </button>
 
@@ -59,7 +59,7 @@ function FAQItem({ faq, index }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <p className="px-5 sm:px-6 pb-5 pt-1 text-sm sm:text-base leading-relaxed" style={{ color: '#A1A1AA' }}>
+            <p className="px-5 sm:px-6 pb-5 pt-1 text-sm sm:text-base leading-relaxed text-text-secondary">
               {faq.a}
             </p>
           </motion.div>
@@ -71,7 +71,7 @@ function FAQItem({ faq, index }) {
 
 export default function FAQSection() {
   return (
-    <section className="py-20 sm:py-24 px-4 sm:px-6 font-poppins" style={{ background: '#0A0A0A' }}>
+    <section className="py-20 sm:py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -80,18 +80,16 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-xs font-semibold tracking-widest uppercase bg-clip-text text-transparent"
-            style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+          <span className="text-xs font-semibold tracking-widest uppercase text-primary">
             FAQs
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
             Got{' '}
-            <span className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+            <span className="text-primary">
               Questions?
             </span>
           </h2>
-          <p className="mt-3 text-base" style={{ color: '#A1A1AA' }}>
+          <p className="mt-3 text-base text-text-secondary">
             Everything you need to know before joining the hype.
           </p>
         </motion.div>

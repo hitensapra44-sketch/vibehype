@@ -31,7 +31,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 font-poppins" style={{ background: '#0A0A0A' }}>
+    <section className="py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,8 +42,7 @@ export default function ProblemSection() {
         >
           <h2 className="text-3xl sm:text-5xl font-bold text-white px-2" style={{ letterSpacing: '-1px', lineHeight: 1.2 }}>
             Problems You Are Facing That{' '}
-            <span className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+            <span className="text-primary">
               Our App Solves
             </span>
           </h2>
@@ -57,10 +56,10 @@ export default function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative group p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300"
+              className="relative group p-6 rounded-2xl border border-border-muted bg-bg-surface hover:bg-bg-elevated transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.05), rgba(236,72,153,0.05))' }} />
+                style={{ background: 'linear-gradient(135deg, rgba(181,89,51,0.05), rgba(158,74,42,0.05))' }} />
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
                   style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(236,72,153,0.15))' }}>

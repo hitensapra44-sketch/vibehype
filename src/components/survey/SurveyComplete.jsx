@@ -17,7 +17,7 @@ export default function SurveyComplete({ onDone }) {
     canvas.height = window.innerHeight; 
 
     const particles = []; 
-    const colors = ['#7C3AED', '#EC4899', '#F59E0B', '#10B981', '#60A5FA', '#fff']; 
+    const colors = ['#b55933', '#9e4a2a', '#e5e5e5', '#3f3835', '#fff']; 
 
     class Particle { 
       constructor(x, y) { 
@@ -96,8 +96,7 @@ export default function SurveyComplete({ onDone }) {
   }, [onDone]); 
 
   return ( 
-    <div className="fixed inset-0 z-50 flex items-center justify-center font-poppins" 
-      style={{ background: '#0A0A0A' }}> 
+    <div className="fixed inset-0 z-50 flex items-center justify-center font-poppins bg-bg-base"> 
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" /> 
       <motion.div 
         initial={{ scale: 0.5, opacity: 0 }} 
@@ -108,8 +107,7 @@ export default function SurveyComplete({ onDone }) {
         <motion.div 
           animate={{ rotate: [0, -10, 10, -10, 10, 0], scale: [1, 1.2, 1] }} 
           transition={{ duration: 0.6, delay: 0.3 }} 
-          className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" 
-          style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }} 
+          className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 bg-primary" 
         > 
           <Sparkles className="w-10 h-10 text-white" /> 
         </motion.div> 
@@ -117,7 +115,7 @@ export default function SurveyComplete({ onDone }) {
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ delay: 0.4 }} 
-          className="text-4xl font-bold text-white mb-3" 
+          className="text-4xl font-bold text-text-primary mb-3" 
           style={{ letterSpacing: '-1px' }} 
         > 
           You're a Vibe! 🎉 
@@ -126,8 +124,7 @@ export default function SurveyComplete({ onDone }) {
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ delay: 0.6 }} 
-          className="text-lg" 
-          style={{ color: '#A1A1AA' }} 
+          className="text-lg text-text-secondary" 
         > 
           Survey complete. Taking you to your early-bird offer… 
         </motion.p> 

@@ -12,7 +12,7 @@ const rows = [
 
 export default function BenefitsTable() {
   return (
-    <section id="benefits" className="py-24 px-4 sm:px-6 font-poppins" style={{ background: '#0A0A0A' }}>
+    <section id="benefits" className="py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

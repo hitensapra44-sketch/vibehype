@@ -28,7 +28,7 @@ export default function ParticleBackground() {
         this.speedX = (Math.random() - 0.5) * 0.4;
         this.speedY = (Math.random() - 0.5) * 0.4;
         this.opacity = Math.random() * 0.5 + 0.1;
-        this.hue = Math.random() > 0.5 ? 263 : 330;
+        this.hue = Math.random() > 0.5 ? 'rgba(181, 89, 51' : 'rgba(158, 74, 42';
       }
       update() {
         this.x += this.speedX;
@@ -40,9 +40,7 @@ export default function ParticleBackground() {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.hue === 263
-          ? `rgba(124, 58, 237, ${this.opacity})`
-          : `rgba(236, 72, 153, ${this.opacity})`;
+        ctx.fillStyle = `${this.hue}, ${this.opacity})`;
         ctx.fill();
       }
     }
@@ -67,7 +65,7 @@ export default function ParticleBackground() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(124, 58, 237, ${0.06 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(181, 89, 51, ${0.06 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

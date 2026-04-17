@@ -12,7 +12,7 @@ const steps = [
       'Describe your app in normal words',
       'Tell us who you\'re targeting and what problems it solves',
       'Paste your SaaS link or set your app/SaaS tone',
-      'One-time setup — Vibe Hype learns your brand forever',
+      'One-time setup and Vibe Hype learns your brand forever',
     ],
   },
   {
@@ -53,7 +53,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="howitworks" className="py-24 px-4 sm:px-6 font-poppins" style={{ background: '#0A0A0A' }}>
+    <section id="howitworks" className="py-24 px-4 sm:px-6 font-poppins bg-transparent">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -63,14 +63,13 @@ export default function HowItWorks() {
           className="text-center mb-6"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
-            Turn Your Headache Marketing Into{' '}
-            <span className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+            Headache Marketing Into{' '}
+            <span className="text-primary">
               Vibe Marketing
             </span>{' '}
             in Seconds
           </h2>
-          <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: '#A1A1AA' }}>
+          <p className="mt-4 text-lg max-w-xl mx-auto text-text-secondary">
             Turn stressful guesswork into chill, automatic vibe growth.
           </p>
         </motion.div>
@@ -83,24 +82,21 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="relative p-6 rounded-2xl border border-white/5 bg-white/[0.02]"
+              className="relative p-6 rounded-2xl border border-border-muted bg-bg-surface"
             >
               <div className="flex items-center gap-3 mb-5">
-                <span className="text-3xl font-bold bg-clip-text text-transparent"
-                  style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #EC4899)' }}>
+                <span className="text-3xl font-bold text-primary">
                   {s.number}
                 </span>
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-                  style={{ background: 'rgba(124,58,237,0.15)' }}>
-                  <s.icon className="w-5 h-5 text-purple-400" />
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-primary/10">
+                  <s.icon className="w-5 h-5 text-primary" />
                 </div>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">{s.title}</h3>
               <ul className="space-y-2">
                 {s.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm" style={{ color: '#A1A1AA' }}>
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)' }} />
+                  <li key={j} className="flex items-start gap-2 text-sm text-text-secondary">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-primary" />
                     {item}
                   </li>
                 ))}
@@ -109,21 +105,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <Link
-            to="/survey"
-            className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-white rounded-lg hover:opacity-90 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/20"
-            style={{ background: 'linear-gradient(90deg, #7C3AED, #EC4899)', borderRadius: '8px' }}
-          >
-            Join the Waitlist for Free – No Card Needed
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

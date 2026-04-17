@@ -7,11 +7,14 @@ import Home from './pages/Home';
 import Survey from './pages/Survey';
 import PrePurchase from './pages/PrePurchase';
 
+import GridBackground from "@/components/ui/grid-background"
+
 function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <Router>
-        <div className="min-h-screen w-full max-w-screen-2xl mx-auto overflow-x-hidden bg-black text-white">
+        <div className="min-h-screen w-full max-w-screen-2xl mx-auto overflow-x-hidden text-text-primary relative">
+          <GridBackground />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/survey" element={<Survey />} />
