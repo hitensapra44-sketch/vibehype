@@ -96,7 +96,7 @@ export default function FooterSection({ joined, onJoined, onValidateEmail }) {
             <div className="w-7 h-7 rounded-md flex items-center justify-center bg-primary">
               <Sparkles className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-white font-bold text-lg">Vibe Hype</span>
+            <span className="text-white font-bold text-lg">Vibe Promote</span>
           </Link>
 
           <div className="flex items-center gap-6 text-sm text-text-secondary">
@@ -112,7 +112,7 @@ export default function FooterSection({ joined, onJoined, onValidateEmail }) {
           </div>
 
           <p className="text-sm text-text-secondary/60">
-            © 2026 Vibe Hype. All rights reserved.
+            © 2026 Vibe Promote. All rights reserved.
           </p>
         </div>
       </div>

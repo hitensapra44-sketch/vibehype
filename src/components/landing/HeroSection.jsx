@@ -93,7 +93,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
             className="mt-6 text-[0.7rem] sm:text-[0.75rem] md:text-[0.875rem] max-w-full mx-auto text-text-secondary"
             style={{ lineHeight: 1.4 }}
           >
-            Vibe Hype an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
+            Vibe Promote an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
           </motion.p>
 
         <motion.div

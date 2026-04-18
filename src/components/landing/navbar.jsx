@@ -47,7 +47,7 @@ export default function Navbar({ joined, onJoinWaitlist }) {
               <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-primary">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
-              <span className="text-white font-bold text-xl tracking-tight">Vibe Hype</span>
+              <span className="text-white font-bold text-xl tracking-tight">Vibe Promote</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

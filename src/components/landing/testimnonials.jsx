@@ -49,7 +49,7 @@ export default function Testimonials() {
           <h2 className="text-4xl sm:text-5xl font-bold text-white" style={{ letterSpacing: '-1px', lineHeight: 1.1 }}>
             Founders Who Love{' '}
             <span className="text-primary">
-              Vibe Hype
+              Vibe Promote
             </span>
           </h2>
         </motion.div>

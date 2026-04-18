@@ -58,7 +58,7 @@ export default function FeaturesSection() {
         >
 
           <h2 className="text-3xl sm:text-5xl font-bold text-white break-words" style={{ letterSpacing: '-1px', lineHeight: 1.2 }}>
-            Vibe Hype Fixes Marketing Problems{' '}
+            Vibe Promote Fixes Marketing Problems{' '}
             <span className="text-primary">
               In One Click
             </span>

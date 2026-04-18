@@ -20,7 +20,7 @@ const steps = [
     number: '02',
     title: 'Generate',
     items: [
-      'Vibe Hype will find real people who need your app right now',
+      'Vibe Promote will find real people who need your app right now',
       'Spots where they\'re talking about it — Reddit, X, TikTok & more',
       'Generates hooks, captions, scripts & hashtags instantly',
       'Picks the perfect platform and best posting times for you',
@@ -34,7 +34,7 @@ const steps = [
       'Get ready-to-post content and decide exactly what goes live',
       'Hit "Post Now" for instant fire or "Schedule" your week',
       'Or upload & schedule your own content effortlessly',
-      'Full control you approve, Vibe Hype execute',
+      'Full control you approve, Vibe Promote execute',
     ],
   },
   {
