@@ -69,32 +69,32 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
           </div>
         </motion.div>
 
-         <motion.h1
-           initial={{ opacity: 0, y: 40 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.15 }}
-           className="text-4xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white leading-tight break-words"
-           style={{ letterSpacing: '-2px', lineHeight: 1.1 }}
-         >
-           93% Of App/Saas{' '}
-           <span className="text-primary inline-block">
-             Fails
-           </span>{' '}
-           Due To Bad Marketing. Don't Be One Of{' '}
-           <span className="text-primary inline-block">
-             Them.
-           </span>
-         </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight break-words"
+            style={{ letterSpacing: '-2px', lineHeight: 1.1 }}
+          >
+            93% Of App/Saas{' '}
+            <span className="text-primary inline-block">
+              Fails
+            </span>{' '}
+            Due To Bad Marketing. Don't Be One Of{' '}
+            <span className="text-primary inline-block">
+              Them.
+            </span>
+          </motion.h1>
 
-         <motion.p
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.3 }}
-           className="mt-6 text-xs sm:text-sm md:text-base max-w-2xl mx-auto text-text-secondary"
-           style={{ lineHeight: 1.6 }}
-         >
-           Vibe Hype an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
-         </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mt-6 text-[0.75rem] sm:text-[0.75rem] md:text-[0.875rem] max-w-2xl mx-auto text-text-secondary"
+            style={{ lineHeight: 1.6 }}
+          >
+            Vibe Hype an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
+          </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
