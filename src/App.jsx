@@ -3,7 +3,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
-import { logPageView } from "./lib/analytics";
+import { initGA, logPageView } from "./lib/analytics";
 import PageNotFound from './lib/PageNotFound';
 
 import Home from './pages/Home';
@@ -16,7 +16,14 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    logPageView(location.pathname);
+    // Initialize GA4
+    initGA();
+  }, []);
+
+  useEffect(() => {
+    // Track page views on route change
+    // This will also fire on initial load after initGA()
+    logPageView(location.pathname + location.search);
   }, [location]);
 
   return (
