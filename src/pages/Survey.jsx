@@ -7,6 +7,8 @@ import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
 import SurveyStep from '../components/survey/SurveyStep';
 import SurveyComplete from '../components/survey/SurveyComplete';
 import { toast } from 'sonner';
+import { logEvent } from "../lib/analytics";
+
 
 const saveSurveyData = async (payload) => {
   const records = payload.map(item => ({
@@ -161,6 +163,8 @@ export default function Survey() {
 
         toast.success('Survey submitted successfully! 🔥');
         setShowComplete(true);
+        logEvent("survey", "completed", "user finished survey");
+
       } catch (err) {
         console.error('❌ Submission error:', err);
         toast.error('Failed to save answers. Please try again.');

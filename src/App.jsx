@@ -1,8 +1,11 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from "react";
+import { logPageView } from "./lib/analytics";
 import PageNotFound from './lib/PageNotFound';
+
 import Home from './pages/Home';
 import Survey from './pages/Survey';
 import PrePurchase from './pages/PrePurchase';
@@ -10,19 +13,23 @@ import PrePurchase from './pages/PrePurchase';
 import GridBackground from "@/components/ui/grid-background"
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    logPageView(location.pathname);
+  }, [location]);
+
   return (
     <QueryClientProvider client={queryClientInstance}>
-      <Router>
-        <div className="min-h-screen w-full max-w-screen-2xl mx-auto overflow-x-hidden text-text-primary relative">
-          <GridBackground />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/survey" element={<Survey />} />
-            <Route path="/pre-purchase" element={<PrePurchase />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
-      </Router>
+      <div className="min-h-screen w-full max-w-screen-2xl mx-auto overflow-x-hidden text-text-primary relative">
+        <GridBackground />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/survey" element={<Survey />} />
+          <Route path="/pre-purchase" element={<PrePurchase />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </div>
       <Toaster />
     </QueryClientProvider>
   )

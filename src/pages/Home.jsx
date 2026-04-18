@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { logEvent } from "../lib/analytics";
+
 import { useSearchParams } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
 import Navbar from '../components/landing/navbar';
@@ -99,6 +101,7 @@ export default function Home() {
   const handleJoined = () => {
     setJoined(true);
     localStorage.setItem('joined_waitlist', 'true');
+    logEvent("waitlist", "signup", "email submitted");
   };
 
   return (

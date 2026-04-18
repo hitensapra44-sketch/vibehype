@@ -1,4 +1,6 @@
 import React from 'react';
+import { logEvent } from "../lib/analytics";
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Sparkles, Check, Shield, Rocket, Gift, Heart } from 'lucide-react';
@@ -81,7 +83,10 @@ export default function PrePurchase() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="w-full py-4 text-lg font-bold text-white rounded-lg bg-primary hover:bg-primary-hover transition-all duration-200 hover:-translate-y-1 shadow-lg shadow-primary/20"
-            onClick={() => window.open('https://www.paypal.com/ncp/payment/C5G5C9AXZYRMY', '_blank')}
+            onClick={() => {
+              logEvent("payment", "clicked", "pre-purchase button clicked");
+              window.open('https://www.paypal.com/ncp/payment/C5G5C9AXZYRMY', '_blank');
+            }}
           >
             Pre-Purchase Now – $1.99
           </motion.button>
