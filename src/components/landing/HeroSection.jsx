@@ -73,7 +73,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-3xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight break-words"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight break-words"
             style={{ letterSpacing: '-2px', lineHeight: 1.1 }}
           >
             93% Of App/Saas{' '}
@@ -90,7 +90,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-6 text-[0.75rem] sm:text-[0.75rem] md:text-[0.875rem] max-w-2xl mx-auto text-text-secondary"
+            className="mt-6 text-xs sm:text-sm md:text-base max-w-2xl mx-auto text-text-secondary"
             style={{ lineHeight: 1.6 }}
           >
             Vibe Hype an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
