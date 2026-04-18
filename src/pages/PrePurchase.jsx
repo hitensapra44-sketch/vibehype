@@ -17,7 +17,10 @@ export default function PrePurchase() {
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
   const handleEmailSubmit = (e) => {
-    e.preventDefault();
+    // Support both form submit (e may be undefined in programmatic call) and explicit click
+    if (e && typeof e.preventDefault === 'function') {
+      e.preventDefault();
+    }
     if (!emailInput) return;
     // Assume success for now; update UI state
     setIsEmailSubmitted(true);
@@ -96,7 +99,7 @@ export default function PrePurchase() {
                 onChange={(e) => setEmailInput(e.target.value)}
                 className="px-3 py-2 rounded border border-border-muted bg-bg-elevated text-text-primary"
               />
-              <button type="submit" className="px-4 py-2 rounded-lg bg-primary text-white font-semibold">Do Survey</button>
+              <button type="button" onClick={handleEmailSubmit} className="px-4 py-2 rounded-lg bg-primary text-white font-semibold">Do Survey</button>
             </form>
           ) : (
             <div className="mt-4 text-left mx-auto max-w-prose text-white">
