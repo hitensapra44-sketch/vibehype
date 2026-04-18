@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { logEvent } from "../lib/analytics";
 
 import { Link } from 'react-router-dom';
@@ -13,6 +13,15 @@ const benefits = [
 ];
 
 export default function PrePurchase() {
+  const [emailInput, setEmailInput] = useState('');
+  const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    if (!emailInput) return;
+    // Assume success for now; update UI state
+    setIsEmailSubmitted(true);
+  };
   return (
     <div className="min-h-screen font-poppins flex flex-col bg-transparent">
       {/* Top bar */}
@@ -77,7 +86,29 @@ export default function PrePurchase() {
             ))}
           </div>
 
-          {/* CTA */}
+          {/* Email capture (BEFORE submission) or confirmation (AFTER) */}
+          {!isEmailSubmitted ? (
+            <form onSubmit={handleEmailSubmit} className="flex items-center justify-center gap-2 mt-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={emailInput}
+                onChange={(e) => setEmailInput(e.target.value)}
+                className="px-3 py-2 rounded border border-border-muted bg-bg-elevated text-text-primary"
+              />
+              <button type="submit" className="px-4 py-2 rounded-lg bg-primary text-white font-semibold">Do Survey</button>
+            </form>
+          ) : (
+            <div className="mt-4 text-left mx-auto max-w-prose text-white">
+              <p>Thank you so much for pre purchasing Vibe Hype. You will get these benefits:</p>
+              <p>· Early beta access upon launch of Vibe Hype</p>
+              <p>· Community access</p>
+              <p>· Early access to full Agentic Mode</p>
+              <p>· Unlimited Agentic Mode + priority support for the first month</p>
+              <p>· Personal brand voice setup + upgraded analytics</p>
+              <p className="mt-2">Please note that all of the above features will be available for the first month after the app goes live.</p>
+            </div>
+          )}
           <motion.button
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
