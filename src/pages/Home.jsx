@@ -70,18 +70,19 @@ export default function Home() {
     }
   }, [searchParams]);
 
-  const handlePaymentSubmit = async (e) => {
-    e.preventDefault();
-    if (!email) return;
+   const handlePaymentSubmit = async (e) => {
+     e.preventDefault();
+     if (!email) return;
 
-    await supabase.from("user_payments").insert({
-      email: email,
-      payment_status: true
-    });
+     await supabase.from("user_payments").insert({
+       email: email,
+       payment_status: true
+     });
 
-    setShowPopup(false);
-    window.history.replaceState({}, "", "/");
-  };
+     setShowPopup(false);
+     window.history.replaceState({}, "", "/");
+     localStorage.setItem('pre_purchase_email_confirmed', 'true');
+   };
 
   const onValidateEmail = (email) => {
     if (!isValidEmail(email)) {
