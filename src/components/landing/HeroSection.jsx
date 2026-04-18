@@ -142,24 +142,11 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
                    to="/survey"
                    className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold text-base rounded-xl bg-primary hover:bg-primary-hover transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-primary/20"
                  >
-                   {typeof window !== 'undefined' && localStorage.getItem('pre_purchase_email_confirmed') === 'true' ? (
-                     <span style={{ whiteSpace: 'pre-line' }}>
-                       Thank you for pre pre-purchasing. As a pre-purchase customer, you will receive the following exclusive benefits:
-                       
-                       · Early beta access upon launch of Vibe Hype
-                       · Community access
-                       · Early access to full Agentic Mode
-                       · Unlimited Agentic Mode + priority support for the first month
-                       · Personal brand voice setup + upgraded analytics
-                       
-                       Please note that all of the above features will be available for the first month after the app goes live.
-                     </span>
-                   ) : (
-                     <>
-                       Do Survey (34s)
-                       <ArrowRight className="w-4 h-4" />
-                     </>
-                   )}
+                    {typeof window !== 'undefined' && localStorage.getItem('pre_purchase_email_confirmed') === 'true' ? (
+                      <><span>Do Survey(takes 32sec)</span><ArrowRight className="w-4 h-4"/></>
+                    ) : (
+                      <><span>Do Survey (34s)</span><ArrowRight className="w-4 h-4" /></>
+                    )}
                  </Link>
                </motion.div>
              )}
