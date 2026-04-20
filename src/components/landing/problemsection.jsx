@@ -9,15 +9,15 @@ const problems = [
   },
   {
     icon: HelpCircle,
-    text: "You don't know what to post, where to post it, or who you're even posting for",
+    text: "Writing posts in ChatGPT that sound nothing like you",
   },
   {
     icon: Layers,
-    text: "You're juggling 10+ apps and tools for one simple marketing task",
+    text: "You're using 10+ apps still doing badly in marketing",
   },
   {
     icon: BarChart3,
-    text: "You don;t have detailed analytics to see whats working and whats not",
+    text: "You don't have detailed analytics to see whats working and whats not",
   },
   {
     icon: Clock,

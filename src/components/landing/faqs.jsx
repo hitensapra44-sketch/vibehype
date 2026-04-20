@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What happens if I pre-purchase the early bird now?",
-    a: "You lock in the $1.99/mo price forever, get unlimited agentic mode on launch, priority support, and early beta access before everyone else.",
+    a: "You lock in early access at $1.99 — the lowest price we'll ever charge. You get notified first when the full tool goes. live, and you skip the waitlist completely.",
   },
 ];
 

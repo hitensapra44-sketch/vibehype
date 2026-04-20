@@ -70,7 +70,7 @@ export default function HowItWorks() {
             in Seconds
           </h2>
           <p className="mt-4 text-lg max-w-xl mx-auto text-text-secondary">
-            Turn stressful guesswork into chill, automatic vibe growth.
+            HOW IT WORKS
           </p>
         </motion.div>
 

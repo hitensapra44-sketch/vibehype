@@ -93,7 +93,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
             className="mt-6 text-[0.7rem] sm:text-[0.75rem] md:text-[0.875rem] max-w-full mx-auto text-text-secondary"
             style={{ lineHeight: 1.4 }}
           >
-            Vibe Promote an AI marketing co-pilot. it finds real people already talking about your problem, figures out exactly what to say to them, builds you a clear strategy, writes posts that sound like you not a robot, schedules and posts everything automatically, tracks what is working, and tells you exactly what to change to keep growing. This is app marketing on autopilot.
+        You didn’t build your product to become a full-time marketer. You build it cause you love it. Vibe Promote finds your audience in real conversations, tells you what to say, generates posts that convert and sound like you not got, and gives you clear analytics and strategies to grow. so you know what’s working and what’s not. This is app marketing on autopilot.
           </motion.p>
 
         <motion.div
@@ -159,8 +159,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
           transition={{ delay: 0.7 }}
           className="mt-6 text-sm font-medium text-text-secondary"
         >
-          ⚡ 246 app/SaaS founders ready for vibe marketing.
-          We will not spam you( Pinky Promise )
+          246 founders on the waitlist. No spam(pinky promise)
         </motion.p>
       </div>
     </section>
