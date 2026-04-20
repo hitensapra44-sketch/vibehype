@@ -64,7 +64,7 @@ export default function FeaturesSection() {
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg max-w-xl mx-auto text-text-secondary">
-            Everything your brand needs to go viral.
+            Everything your app/saas needs to grow.
           </p>
         </motion.div>
 

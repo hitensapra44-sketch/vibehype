@@ -56,7 +56,7 @@ export default function FooterSection({ joined, onJoined, onValidateEmail }) {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2" style={{ letterSpacing: '-1px' }}>
-              Ready to Make Your Brand{' '}
+              Ready to Make Your App/Saas{' '}
               <span className="text-primary">
                 Impossible to Ignore?
               </span>
