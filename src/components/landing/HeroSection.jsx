@@ -93,7 +93,7 @@ export default function HeroSection({ joined, onJoined, onValidateEmail }) {
             className="mt-6 text-[0.7rem] sm:text-[0.75rem] md:text-[0.875rem] max-w-full mx-auto text-text-secondary"
             style={{ lineHeight: 1.4 }}
           >
-        You didn’t build your product to become a full-time marketer. You build it cause you love it. Vibe Promote finds your audience in real conversations, tells you what to say, generates posts that converts and sound like you not gpt, and gives you clear analytics and strategies to grow. so you know what’s working and what’s not. This is app marketing on autopilot.
+        You didn’t build your product to become a full-time marketer. Vibe Promote finds your audience in real conversations, tells you what to say, generates posts that converts and sound like you not gpt, and gives you clear analytics and strategies to grow. so you know what’s working and what’s not. This is app marketing on autopilot.
           </motion.p>
 
         <motion.div
