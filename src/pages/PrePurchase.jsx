@@ -95,7 +95,7 @@ export default function PrePurchase() {
             className="w-full py-4 text-lg font-bold text-white rounded-lg bg-primary hover:bg-primary-hover transition-all duration-200 hover:-translate-y-1 shadow-lg shadow-primary/20"
             onClick={() => {
               logEvent("payment", "clicked", "pre-purchase button clicked");
-              window.open('https://payments.cashfree.com/forms?code=VibePromote', '_blank');
+              window.open('https://checkout.dodopayments.com/buy/pdt_0NeCPrKXA6djJkh8aW1kG?quantity=1', '_blank');
             }}
           >
             Pre-Purchase Now – $1.99
